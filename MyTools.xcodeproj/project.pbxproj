@@ -10,6 +10,8 @@
 		63C52ADC1B37558100E48D31 /* MyTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 63C52ADB1B37558100E48D31 /* MyTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		63C52AE31B37558200E48D31 /* MyTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63C52AD81B37558100E48D31 /* MyTools.framework */; };
 		63C52AE81B37558200E48D31 /* MyToolsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C52AE71B37558200E48D31 /* MyToolsTests.swift */; };
+		63C52AF31B37559E00E48D31 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C52AF21B37559E00E48D31 /* Error.swift */; };
+		63C52AF51B3755EE00E48D31 /* ErrorHandlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C52AF41B3755EE00E48D31 /* ErrorHandlers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,8 @@
 		63C52AE21B37558200E48D31 /* MyToolsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyToolsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		63C52AE71B37558200E48D31 /* MyToolsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyToolsTests.swift; sourceTree = "<group>"; };
 		63C52AE91B37558200E48D31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63C52AF21B37559E00E48D31 /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		63C52AF41B3755EE00E48D31 /* ErrorHandlers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorHandlers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,8 @@
 			isa = PBXGroup;
 			children = (
 				63C52ADB1B37558100E48D31 /* MyTools.h */,
+				63C52AF21B37559E00E48D31 /* Error.swift */,
+				63C52AF41B3755EE00E48D31 /* ErrorHandlers.swift */,
 				63C52ADD1B37558200E48D31 /* Info.plist */,
 			);
 			path = MyTools;
@@ -142,11 +148,13 @@
 		63C52ACF1B37558100E48D31 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = chaouki;
 				TargetAttributes = {
 					63C52AD71B37558100E48D31 = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = K45Z3V8V48;
 					};
 					63C52AE11B37558200E48D31 = {
 						CreatedOnToolsVersion = 7.0;
@@ -193,6 +201,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63C52AF31B37559E00E48D31 /* Error.swift in Sources */,
+				63C52AF51B3755EE00E48D31 /* ErrorHandlers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +317,8 @@
 		63C52AED1B37558200E48D31 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -317,12 +329,15 @@
 				PRODUCT_BUNDLE_IDENTIFIER = me.chaouki.MyTools;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		63C52AEE1B37558200E48D31 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
